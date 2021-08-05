@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    {% block body %}
+            {% for user in user_list%}
+            <ul style="list-style-type: none">
+                <li>
+                  <div class="card" style="width:400px">
+                    <img class="card-img-top" src="https://thumbs.dreamstime.com/z/person-identification-badge-id-plastic-card-personal-data-photo-person-identification-badge-id-plastic-card-personal-135769478.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                      <h4 class="card-title">name: {{user["name"]}}</h4>
+                      <p class="card-text">address: {{user["address"]}}</p>
+                      <p class="card-text">Email: {{user["email"]}}</p>
+                    </div>
+                  </div>
+                </li>
+            </ul>
+            {% endfor %}
+    {% endblock %}
+</html>
